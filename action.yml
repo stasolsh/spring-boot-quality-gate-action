@@ -1,0 +1,31 @@
+name: "Spring Boot Quality Gate"
+description: "Runs tests, checks JaCoCo coverage, and fails if coverage is below threshold"
+author: "Stanislav Olshanskyi"
+
+inputs:
+  coverage-threshold:
+    description: "Minimum required line coverage percentage"
+    required: false
+    default: "80"
+
+  build-tool:
+    description: "Build tool: auto, maven, gradle"
+    required: false
+    default: "auto"
+
+  working-directory:
+    description: "Project directory"
+    required: false
+    default: "."
+
+outputs:
+  coverage:
+    description: "Detected JaCoCo line coverage percentage"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
+branding:
+  icon: "check-circle"
+  color: "green"
