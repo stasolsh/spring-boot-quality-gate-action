@@ -14,7 +14,7 @@ GitHub Action for Java/Spring Boot projects.
 ## Usage
 
 ```yaml
-- uses: your-github-username/spring-boot-quality-gate-action@v1
+- uses: stasolsh/spring-boot-quality-gate-action@v1
   with:
     coverage-threshold: 80
     build-tool: auto
