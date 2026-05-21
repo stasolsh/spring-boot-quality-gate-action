@@ -132,4 +132,12 @@ async function writeSummary(coverage, threshold, reportPath) {
     .write();
 }
 
-run();
+if (require.main === module) {
+  run();
+}
+
+module.exports = {
+  detectBuildTool,
+  findJacocoReport,
+  calculateCoverage
+};
